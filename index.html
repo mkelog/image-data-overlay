@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>mix-blend-mode-image-data-overlay</title>
+	
+
+	<style>
+#mainmain{
+  background-image: url(images/test-image.jpg);
+  background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+  filter: invert(100%);
+}
+h1{
+  font-size: 55px;
+
+}	
+	</style>
+  </head>
+  <body>
+<div id="mainmain">
+  
+  <h1> TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText TextTextTextTextTextTextTextTextTextText               Text</h1>
+
+</div>
+<div>
+<img id ="imageimage" src = "images/test-image.jpg"></>
+</div>
+		
+	<script src="scripts/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+	<script>
+        document.getElementById("imageimage").onclick = function() {
+            EXIF.getData(this, function() {
+
+                alert(EXIF.pretty(this));
+            });
+        }
+	</script>
+  </body>
+</html>

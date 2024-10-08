@@ -1,0 +1,22 @@
+body {
+
+}
+img{
+  width: 800px;
+  height: auto;	
+
+}
+div{
+	position:absolute;
+	background-image: url("images/test-image.jpg");	width:800px;
+	height:800px;
+
+}
+p{
+	mix-blend-mode: difference;
+	position: absolute;
+	top:0px;
+	
+	invert(100%)
+-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: url(images/test-image.jpg);
+}
